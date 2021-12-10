@@ -148,16 +148,37 @@ src
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
-
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
-
+| README & planning   |    H    |     8 HRS      |    8 HRS    |       |
+| Backend Auth    |    H     |     3 HRS      |         |       |
+| Backend Database   |    H     |     3 HRS      |         |        |
+| Seed & Create data   |    H     |     2 HRS      |         |        |
+| Test backend routes    |    H     |     1 HR      |         |       |
+| Frontend Auth   |    H     |     3 HRS      |          |        |
+| Frontend routes & test |    H     |     2 HRS      |        |        |
+| Get, Edit, Delete posts   |    H     |     3 HRS      |          |        |
+| Layout/Nav/Footer JS   |    H     |     2 HRS      |          |        |
+| Layout/Nav/Footer CSS |    H     |     2 HRS      |         |          |
+| SignIn JS |    H     |     2 HRS      |          |        |
+| SignIn CSS   |    H    |     2 HRS      |          |        |
+| SignUp JS |    H     |     2 HRS      |         |          |
+| SignUp CSS |    H     |     2 HRS      |          |          |
+| MainFeed JS |    H     |     2 HRS      |          |          |
+| MainFeed CSS |    H     |     2 HRS      |          |          |
+| UserProfile JS |    H     |     2 HRS      |          |          |
+| UserProfile CSS |    H     |     2 HRS      |          |          |
+| SingleUserFeed JS |    H     |     2 HRS      |          |          |
+| SingleUserFeed CSS |    H     |     2 HRS      |          |          |
+| PostEdit JS |    H     |     2 HRS      |          |          |
+| PostEdit CSS |    H     |     2 HRS      |          |          |
+| PostCreate JS |    H     |     2 HRS      |          |          |
+| PostCreate CSS |    H     |     2 HRS      |          |          |
+| ImageGrid JS |    H     |     2 HRS      |          |          |
+| ImageGrid CSS |    H     |     2 HRS      |          |          |
+| ImageFeed JS |    H     |     2 HRS      |          |          |
+| ImageFeed CSS |    H     |     2 HRS      |          |          |
+| TOTAL               |          |    65 HRS      |     8 HRS     |          |
 <br>
 
 ### Server (Back End)
