@@ -88,15 +88,11 @@ _The **Instagram** MVP will allow users to share and explore personal images. Up
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
-
 [Whimsical Component Tree](https://whimsical.com/instagram-component-tree-NJ1ZJ787D9M3mingenii6N)
 
 ![Component Tree](https://i.imgur.com/Vtt4Pjq.png)
 
 #### Component Architecture
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
@@ -142,7 +138,11 @@ src
 |__ services/
       |__ apiConfig.js
       |__ auth.js
-      |__ post.js
+      |__ posts.js
+|__ App.css
+|__ App.js
+|__ index.css
+|__ index.js
 
 ```
 
@@ -164,9 +164,7 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
-
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
+[ERD](https://i.imgur.com/u1b0yKE.png)
 <br>
 
 ***
