@@ -1,16 +1,18 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy]
+  before_action :set_user, only: :show
+  # [:show, :update, :destroy]
+  # if needing update or destroy, reference full stack build video @ 2:05 for authorize_request
 
   # GET /users
-  def index
-    @users = User.all
+  # def index
+  #   @users = User.all
 
-    render json: @users
-  end
+  #   render json: @users, except:password_digest
+  # end
 
   # GET /users/1
   def show
-    render json: @user
+    render json: @user, except:password_digest
   end
 
   # POST /users
@@ -29,18 +31,18 @@ class UsersController < ApplicationController
   end
 
   # PATCH/PUT /users/1
-  def update
-    if @user.update(user_params)
-      render json: @user
-    else
-      render json: @user.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @user.update(user_params)
+  #     render json: @user
+  #   else
+  #     render json: @user.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /users/1
-  def destroy
-    @user.destroy
-  end
+  # def destroy
+  #   @user.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
