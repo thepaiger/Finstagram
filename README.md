@@ -56,7 +56,7 @@ _The **Instagram** MVP will allow users to share and explore personal images. Up
 
 #### Wireframes
 
-![Figma Wireframes](https://www.figma.com/file/da1YKFco0d6Y6jeghcTqt3/Instagram-Wireframes?node-id=0%3A1)
+[Figma Wireframes](https://www.figma.com/file/da1YKFco0d6Y6jeghcTqt3/Instagram-Wireframes?node-id=0%3A1)
 
 - Main Feed
 
