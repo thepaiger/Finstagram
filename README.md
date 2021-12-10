@@ -40,16 +40,18 @@ _The **Finstagram** MVP will allow users to share and explore personal images. U
 
 ### Libraries and Dependencies
 
-|     Library      | Description                                |
-| :--------------: | :----------------------------------------- |
-|      React       | Front-end JavaScript library for building UIs based on components. |
-| React-Router-Dom | Declarative routing for React. |
-|      Axios       | Provides full CRUD capabilites using XMLHttpRequests. |
-|   Ruby on Rails  | Server-side web application framework written in Ruby. |
-|     Rack-CORS    | Ruby on Rails Cross-Origin Resource Sharing (CORS). |
-|     Bcrypt       | Secure hashing algorithm for safely handling passwords. |
-|        JWT       | Compact URL-safe means of representing claims to be transferred between two parties. |
+|     Library      | Description                                                                                         |
+| :--------------: | :-------------------------------------------------------------------------------------------------- |
+|      React       | Front-end JavaScript library for building UIs based on components.                                  |
+| React-Router-Dom | Declarative routing for React.                                                                      |
+|      Axios       | Provides full CRUD capabilites using XMLHttpRequests.                                               |
+|  Ruby on Rails   | Server-side web application framework written in Ruby.                                              |
+|    Rack-CORS     | Ruby on Rails Cross-Origin Resource Sharing (CORS).                                                 |
+|      Bcrypt      | Secure hashing algorithm for safely handling passwords.                                             |
+|       JWT        | Compact URL-safe means of representing claims to be transferred between two parties.                |
+|    Pry Rails     | An alternative Rails Console bringing REPL-driven programming to Ruby.                              |
 |  Awesome Print   | Pretty prints Ruby objects in full color exposing their internal structure with proper indentation. |
+
 <br>
 
 ### Client (Front End)
@@ -74,7 +76,7 @@ _The **Finstagram** MVP will allow users to share and explore personal images. U
 
 #### Component Architecture
 
-``` structure
+```structure
 
 src
 |__ assets/
@@ -128,37 +130,38 @@ src
 
 #### Time Estimates
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| README & planning   |    H    |     8 HRS      |    8 HRS    |       |
-| Backend Auth    |    H     |     3 HRS      |         |       |
-| Backend Database   |    H     |     3 HRS      |         |        |
-| Seed & Create data   |    H     |     2 HRS      |         |        |
-| Test backend routes    |    H     |     1 HR      |         |       |
-| Frontend Auth   |    H     |     3 HRS      |          |        |
-| Frontend routes & test |    H     |     2 HRS      |        |        |
-| Get, Edit, Delete posts   |    H     |     3 HRS      |          |        |
-| Layout/Nav/Footer JS   |    H     |     2 HRS      |          |        |
-| Layout/Nav/Footer CSS |    H     |     2 HRS      |         |          |
-| SignIn JS |    H     |     2 HRS      |          |        |
-| SignIn CSS   |    H    |     2 HRS      |          |        |
-| SignUp JS |    H     |     2 HRS      |         |          |
-| SignUp CSS |    H     |     2 HRS      |          |          |
-| MainFeed JS |    H     |     2 HRS      |          |          |
-| MainFeed CSS |    H     |     2 HRS      |          |          |
-| UserProfile JS |    H     |     2 HRS      |          |          |
-| UserProfile CSS |    H     |     2 HRS      |          |          |
-| SingleUserFeed JS |    H     |     2 HRS      |          |          |
-| SingleUserFeed CSS |    H     |     2 HRS      |          |          |
-| PostEdit JS |    H     |     2 HRS      |          |          |
-| PostEdit CSS |    H     |     2 HRS      |          |          |
-| PostCreate JS |    H     |     2 HRS      |          |          |
-| PostCreate CSS |    H     |     2 HRS      |          |          |
-| ImageGrid JS |    H     |     2 HRS      |          |          |
-| ImageGrid CSS |    H     |     2 HRS      |          |          |
-| ImageFeed JS |    H     |     2 HRS      |          |          |
-| ImageFeed CSS |    H     |     2 HRS      |          |          |
-| TOTAL               |          |    65 HRS      |     8 HRS     |          |
+| Task                    | Priority | Estimated Time | Time Invested | Actual Time |
+| ----------------------- | :------: | :------------: | :-----------: | :---------: |
+| README & planning       |    H     |     8 HRS      |     8 HRS     |             |
+| Backend Auth            |    H     |     3 HRS      |               |             |
+| Backend Database        |    H     |     3 HRS      |               |             |
+| Seed & Create data      |    H     |     2 HRS      |               |             |
+| Test backend routes     |    H     |      1 HR      |               |             |
+| Frontend Auth           |    H     |     3 HRS      |               |             |
+| Frontend routes & test  |    H     |     2 HRS      |               |             |
+| Get, Edit, Delete posts |    H     |     3 HRS      |               |             |
+| Layout/Nav/Footer JS    |    H     |     2 HRS      |               |             |
+| Layout/Nav/Footer CSS   |    H     |     2 HRS      |               |             |
+| SignIn JS               |    H     |     2 HRS      |               |             |
+| SignIn CSS              |    H     |     2 HRS      |               |             |
+| SignUp JS               |    H     |     2 HRS      |               |             |
+| SignUp CSS              |    H     |     2 HRS      |               |             |
+| MainFeed JS             |    H     |     2 HRS      |               |             |
+| MainFeed CSS            |    H     |     2 HRS      |               |             |
+| UserProfile JS          |    H     |     2 HRS      |               |             |
+| UserProfile CSS         |    H     |     2 HRS      |               |             |
+| SingleUserFeed JS       |    H     |     2 HRS      |               |             |
+| SingleUserFeed CSS      |    H     |     2 HRS      |               |             |
+| PostEdit JS             |    H     |     2 HRS      |               |             |
+| PostEdit CSS            |    H     |     2 HRS      |               |             |
+| PostCreate JS           |    H     |     2 HRS      |               |             |
+| PostCreate CSS          |    H     |     2 HRS      |               |             |
+| ImageGrid JS            |    H     |     2 HRS      |               |             |
+| ImageGrid CSS           |    H     |     2 HRS      |               |             |
+| ImageFeed JS            |    H     |     2 HRS      |               |             |
+| ImageFeed CSS           |    H     |     2 HRS      |               |             |
+| TOTAL                   |          |     65 HRS     |     8 HRS     |             |
+
 <br>
 
 ### Server (Back End)
@@ -168,7 +171,7 @@ src
 ![ERD](https://i.imgur.com/YTeQ83x.png)
 <br>
 
-***
+---
 
 ## Post-MVP
 
@@ -180,7 +183,7 @@ src
 - _Add chat feature._
 - _Add React Native for mobile app usage._
 
-***
+---
 
 ## Code Showcase
 
