@@ -40,8 +40,6 @@ _The **Instagram** MVP will allow users to share and explore personal images. Up
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | Front-end JavaScript library for building UIs based on components. |
@@ -62,31 +60,31 @@ _The **Instagram** MVP will allow users to share and explore personal images. Up
 
 - Main Feed
 
-<img src="https://imgur.com/lC1mOZt" title="Main Feed" />
+![Main Feed](https://i.imgur.com/lC1mOZt.png)
 
 - User Profile
 
-<img src="https://imgur.com/QWFHG58" title="User Profile" />
+![User Profile](https://i.imgur.com/QWFHG58.png)
 
 - Single User Feed
 
-<img src="https://imgur.com/Xvrwk58" title="Single User Feed" />
+![Single User Feed](https://i.imgur.com/Xvrwk58.png)
 
 - Upload Post
 
-<img src="https://imgur.com/PUzftGX" title="Upload Post" />
+![Upload Post](https://i.imgur.com/PUzftGX.png)
 
 - Edit Post
 
-<img src="https://imgur.com/Jtay8X7" title="Edit Post" />
+![Edit Post](https://i.imgur.com/Jtay8X7.png)
 
 - Sign In
 
-<img src="https://imgur.com/J5Z2dSF" title="Sign In" />
+![Sign In](https://i.imgur.com/J5Z2dSF.png)
 
 - Sign Up
 
-<img src="https://imgur.com/W9ONiea" title="Sign Up" />
+![Sign Up](https://i.imgur.com/W9ONiea.png)
 
 #### Component Tree
 
