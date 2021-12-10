@@ -70,13 +70,13 @@ _The **Instagram** MVP will allow users to share and explore personal images. Up
 
 ![Single User Feed](https://i.imgur.com/Xvrwk58.png)
 
-- Upload Post
+- Post Create
 
-![Upload Post](https://i.imgur.com/PUzftGX.png)
+![Post Create](https://i.imgur.com/PUzftGX.png)
 
-- Edit Post
+- Post Edit
 
-![Edit Post](https://i.imgur.com/Jtay8X7.png)
+![Post Edit](https://i.imgur.com/Jtay8X7.png)
 
 - Sign In
 
@@ -90,7 +90,9 @@ _The **Instagram** MVP will allow users to share and explore personal images. Up
 
 > Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
 
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+[Whimsical Component Tree](https://whimsical.com/instagram-component-tree-NJ1ZJ787D9M3mingenii6N)
+
+![Component Tree](https://i.imgur.com/Vtt4Pjq.png)
 
 #### Component Architecture
 
@@ -100,13 +102,47 @@ _The **Instagram** MVP will allow users to share and explore personal images. Up
 
 src
 |__ assets/
-      |__ fonts
       |__ graphics
       |__ images
-      |__ mockups
 |__ components/
-      |__ Header.jsx
+      |__ ImageGrid
+            |__ ImageGrid.css
+            |__ ImageGrid.jsx
+      |__ ImageFeed
+            |__ ImageFeed.css
+            |__ ImageFeed.jsx
+|__ containers/
+      |__ MainContainer.jsx
+|__ layouts/
+      |__ Layout
+            |__ Layout.css
+            |__ Layout.jsx
+|__ screens/
+      |__ MainFeed/
+            |__ MainFeed.css
+            |__ MainFeed.jsx
+      |__ PostCreate/
+            |__ PostCreate.css
+            |__ PostCreate.jsx
+      |__ PostEdit/
+            |__ PostEdit.css
+            |__ PostEdit.jsx
+      |__ SignIn/
+            |__ SignIn.css
+            |__ SignIn.jsx
+      |__ SignUp/
+            |__ SignUp.css
+            |__ SignUp.jsx
+      |__ SingleUserFeed/
+            |__ SingleUserFeed.css
+            |__ SingleUserFeed.jsx
+      |__ UserProfile/
+            |__ UserProfile.css
+            |__ UserProfile.jsx
 |__ services/
+      |__ apiConfig.js
+      |__ auth.js
+      |__ post.js
 
 ```
 
