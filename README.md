@@ -1,4 +1,4 @@
-# Instagram
+# Finstagram
 
 - [Overview](#overview)
 - [MVP](#mvp)
@@ -25,7 +25,7 @@ This build is an image-based social media platform in the style of Instagram, as
 
 ## MVP
 
-_The **Instagram** MVP will allow users to share and explore personal images. Upon log in, they will be displayed current posts from all users and have the ability to contribute their own images._
+_The **Finstagram** MVP will allow users to share and explore personal images. Upon log in, they will be displayed current posts from all users and have the ability to contribute their own images._
 
 <br>
 
@@ -56,7 +56,7 @@ _The **Instagram** MVP will allow users to share and explore personal images. Up
 
 #### Wireframes
 
-[Figma Wireframes](https://www.figma.com/file/da1YKFco0d6Y6jeghcTqt3/Instagram-Wireframes?node-id=0%3A1)
+[Figma Wireframes](https://www.figma.com/file/da1YKFco0d6Y6jeghcTqt3/Finstagram-Wireframes)
 
 - Main Feed
 
@@ -66,29 +66,9 @@ _The **Instagram** MVP will allow users to share and explore personal images. Up
 
 ![User Profile](https://i.imgur.com/QWFHG58.png)
 
-- Single User Feed
-
-![Single User Feed](https://i.imgur.com/Xvrwk58.png)
-
-- Post Create
-
-![Post Create](https://i.imgur.com/PUzftGX.png)
-
-- Post Edit
-
-![Post Edit](https://i.imgur.com/Jtay8X7.png)
-
-- Sign In
-
-![Sign In](https://i.imgur.com/J5Z2dSF.png)
-
-- Sign Up
-
-![Sign Up](https://i.imgur.com/W9ONiea.png)
-
 #### Component Tree
 
-[Whimsical Component Tree](https://whimsical.com/instagram-component-tree-NJ1ZJ787D9M3mingenii6N)
+[Whimsical Component Tree](https://whimsical.com/finstagram-component-tree-NJ1ZJ787D9M3mingenii6N)
 
 ![Component Tree](https://i.imgur.com/Vtt4Pjq.png)
 
@@ -185,7 +165,7 @@ src
 
 #### ERD Model
 
-![ERD](https://i.imgur.com/u1b0yKE.png)
+![ERD](https://i.imgur.com/YTeQ83x.png)
 <br>
 
 ***
@@ -194,9 +174,11 @@ src
 
 - _Add comments and likes._
 - _Add search for users._
-- _Add videos._
-- _Add following/relations between users._
+- _Change link upload to file upload._
+- _Add video functionality._
+- _Add follower relationships between users._
 - _Add chat feature._
+- _Add React Native for mobile app usage._
 
 ***
 
