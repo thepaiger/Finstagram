@@ -60,7 +60,7 @@ _The **Finstagram** MVP will allow users to share and explore personal images. U
 
 - Main Feed
 
-![Main Feed](https://i.imgur.com/lC1mOZt.png)
+![Main Feed](https://i.imgur.com/p915BlE.png)
 
 - User Profile
 
