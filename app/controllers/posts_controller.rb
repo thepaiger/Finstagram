@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: :show
-  before_action :authorize_request, only: :create
-  before_action :set_user_post, only: [:update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
+  # before_action :set_user_post, only: [:update, :destroy]
 
   # GET /posts
   def index
@@ -29,6 +29,7 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1
   def update
+    @post = @current_user.posts.find(params[:id])
     if @post.update(post_params)
       render json: @post
     else
@@ -38,6 +39,7 @@ class PostsController < ApplicationController
 
   # DELETE /posts/1
   def destroy
+    @post = @current_user.posts.find(params[:id])
     @post.destroy
   end
 
@@ -47,9 +49,9 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
     end
 
-    def set_user_post
-      @post = @current_user.posts.find(params[:id])
-    end
+    # def set_user_post
+    #   @post = @current_user.posts.find(params[:id])
+    # end
 
     # Only allow a list of trusted parameters through.
     def post_params
