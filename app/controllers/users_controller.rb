@@ -4,11 +4,11 @@ class UsersController < ApplicationController
   # if needing update or destroy, reference full stack build video @ 2:05 for authorize_request
 
   # GET /users
-  # def index
-  #   @users = User.all
+  def index
+    @users = User.all
 
-  #   render json: @users, except:password_digest
-  # end
+    render json: @users, except: :password_digest, include: :posts
+  end
 
   # GET /users/1
   def show
