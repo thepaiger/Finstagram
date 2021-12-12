@@ -2,13 +2,13 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-export default function PostEdit({ posts, handlePostUpdate }) {
+export default function PostEdit({ posts, handlePostUpdate, handlePostDelete }) {
   const [formData, setFormData] = useState({
     caption: ''
   })
+  const { caption } = formData;
   const [image, setImage] = useState(null);
   const [imageAlt, setImageAlt] = useState(null);
-  const { caption } = formData;
   const { post_id } = useParams();
 
   useEffect(() => {
@@ -51,7 +51,7 @@ export default function PostEdit({ posts, handlePostUpdate }) {
         />
       </label>
       <button>Share</button>
-      <button>Delete Post</button>
+      <button onClick={() => handlePostDelete(post_id)}>Delete Post</button>
     </form>
   )
 }
