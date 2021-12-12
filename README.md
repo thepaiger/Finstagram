@@ -132,6 +132,7 @@ src
 | Task                    | Priority | Estimated Time | Time Invested | Actual Time |
 | ----------------------- | :------: | :------------: | :-----------: | :---------: |
 | README & planning       |    H     |     8 HRS      |     8 HRS     |             |
+| Backend Setup           |    H     |     2 HRS      |               |             |
 | Backend Auth            |    H     |     3 HRS      |               |             |
 | Backend Database        |    H     |     3 HRS      |               |             |
 | Seed & Create data      |    H     |     2 HRS      |               |             |
@@ -141,6 +142,8 @@ src
 | Get, Edit, Delete posts |    H     |     3 HRS      |               |             |
 | Layout/Nav/Footer JS    |    H     |     2 HRS      |               |             |
 | Layout/Nav/Footer CSS   |    H     |     2 HRS      |               |             |
+| App JS                  |    H     |     2 HRS      |               |             |
+| App CSS                 |    H     |      1 HR      |               |             |
 | SignIn JS               |    H     |     2 HRS      |               |             |
 | SignIn CSS              |    H     |     2 HRS      |               |             |
 | SignUp JS               |    H     |     2 HRS      |               |             |
@@ -159,7 +162,7 @@ src
 | ImageGrid CSS           |    H     |     2 HRS      |               |             |
 | ImageFeed JS            |    H     |     2 HRS      |               |             |
 | ImageFeed CSS           |    H     |     2 HRS      |               |             |
-| TOTAL                   |          |     65 HRS     |     8 HRS     |             |
+| TOTAL                   |          |     67 HRS     |     8 HRS     |             |
 
 <br>
 
