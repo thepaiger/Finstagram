@@ -5,9 +5,10 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 // Screens
 import MainFeed from '../screens/MainFeed/MainFeed';
 import PostCreate from '../screens/PostCreate/PostCreate';
+import PostEdit from '../screens/PostEdit/PostEdit';
 
 // Services
-import { getAllPosts, postPost } from '../services/posts';
+import { getAllPosts, postPost, putPost } from '../services/posts';
 
 export default function MainContainer({ currentUser }) {
   const [posts, setPosts] = useState([]);
@@ -23,10 +24,20 @@ export default function MainContainer({ currentUser }) {
     // (currentUser && fetchPosts());
   }, [currentUser])
 
-  const handleFoodCreate = async (formData) => {
+  const handlePostCreate = async (formData) => {
     const newPost = await postPost(formData);
     setPosts(prevState => [...prevState, newPost]);
     history.push('/')
+  }
+
+  const handlePostUpdate = async (post_id, formData) => {
+    const newPost = await putPost(post_id, formData);
+    setPosts((prevState) =>
+      prevState.map((post) => {
+        return post.id === Number(post_id) ? newPost : post;
+      })
+    );
+    history.push('/');
   }
 
   return (
@@ -39,10 +50,10 @@ export default function MainContainer({ currentUser }) {
           <h2>UserProfile</h2>
         </Route>
         <Route path='/edit-post/:post_id'>
-          <h2>PostEdit</h2>
+          <PostEdit posts={posts} handlePostUpdate={handlePostUpdate} />
         </Route>
         <Route path='/create-post'>
-          <PostCreate handleFoodCreate={handleFoodCreate} />
+          <PostCreate handlePostCreate={handlePostCreate} />
         </Route>
         <Route path='/'>
           <MainFeed posts={posts} />

@@ -18,7 +18,7 @@ export default function MainFeed({ posts }) {
         <article>
           <img src={post.user.profile_pic_url} alt={`${post.user.username}'s Profile Picture`} />
           <h4>{post.user.username}</h4>
-          <img src={post.img_url} alt={`${post.user.username}'s Post'`} />
+          <img src={post.img_url} alt={`${post.user.username}'s Post`} />
           <h6>{post.user.username}</h6>
           <p>{post.caption}</p>
         </article>

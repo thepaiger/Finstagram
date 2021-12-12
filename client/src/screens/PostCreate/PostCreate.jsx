@@ -1,6 +1,7 @@
+// Packages
 import { useState } from 'react';
 
-export default function PostCreate({ handleFoodCreate }) {
+export default function PostCreate({ handlePostCreate }) {
   const [formData, setFormData] = useState({
     img_url: '',
     caption: ''
@@ -18,7 +19,7 @@ export default function PostCreate({ handleFoodCreate }) {
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
-      handleFoodCreate(formData);
+      handlePostCreate(formData);
     }}>
       <h2>Upload an Image</h2>
       <label className='hidden'>
@@ -33,7 +34,7 @@ export default function PostCreate({ handleFoodCreate }) {
         />
       </label>
       <label className='hidden'>
-        Image URL
+        Caption
         <textarea
           placeholder="Write a caption..."
           name="caption"
