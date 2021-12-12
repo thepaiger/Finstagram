@@ -91,10 +91,9 @@ src
             |__ ImageFeed.jsx
 |__ containers/
       |__ MainContainer.jsx
-|__ layouts/
-      |__ Layout
-            |__ Layout.css
-            |__ Layout.jsx
+|__ layout/
+      |__ Layout.css
+      |__ Layout.jsx
 |__ screens/
       |__ MainFeed/
             |__ MainFeed.css
