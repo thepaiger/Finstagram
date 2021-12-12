@@ -5,8 +5,9 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 // CSS
 import './App.css';
 
-// Screens
+// Screens/Containers
 import Layout from './layout/Layout';
+import MainContainer from './containers/MainContainer';
 import SignIn from './screens/SignIn/SignIn';
 import SignUp from './screens/SignUp/SignUp';
 
@@ -53,6 +54,9 @@ function App() {
           </Route>
           <Route path='/sign-up'>
             <SignUp handleSignUp={handleSignUp} />
+          </Route>
+          <Route path='/'>
+            <MainContainer />
           </Route>
         </Switch>
       </Layout>
