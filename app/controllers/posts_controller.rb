@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
 
-    render json: @posts
+    render json: @posts, include: :user, except: :password_digest
   end
 
   # GET /posts/1

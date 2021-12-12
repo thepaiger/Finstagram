@@ -1,14 +1,25 @@
+// Packages
 import { useState, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-export default function MainContainer() {
+// Screens
+import MainFeed from '../screens/MainFeed/MainFeed';
+
+// Services
+import { getAllPosts } from '../services/posts';
+
+export default function MainContainer({ currentUser }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
-
-    }
-  })
+      const postList = await getAllPosts();
+      setPosts(postList);
+    };
+    if (currentUser) fetchPosts();
+    // test if this works
+    // (currentUser && fetchPosts());
+  }, [currentUser])
 
   return (
     <div>
@@ -26,7 +37,7 @@ export default function MainContainer() {
           <h2>PostCreate</h2>
         </Route>
         <Route path='/'>
-          <h2>MainFeed</h2>
+          <MainFeed posts={posts} />
         </Route>
       </Switch>
     </div >
