@@ -1,16 +1,17 @@
 // Packages
 import { useState, useEffect } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useHistory } from 'react-router-dom';
 
 // Screens
 import MainFeed from '../screens/MainFeed/MainFeed';
 import PostCreate from '../screens/PostCreate/PostCreate';
 
 // Services
-import { getAllPosts } from '../services/posts';
+import { getAllPosts, postPost } from '../services/posts';
 
 export default function MainContainer({ currentUser }) {
   const [posts, setPosts] = useState([]);
+  const history = useHistory();
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -21,6 +22,12 @@ export default function MainContainer({ currentUser }) {
     // test if this works
     // (currentUser && fetchPosts());
   }, [currentUser])
+
+  const handleFoodCreate = async (formData) => {
+    const newPost = await postPost(formData);
+    setPosts(prevState => [...prevState, newPost]);
+    history.push('/')
+  }
 
   return (
     <main>
@@ -35,7 +42,7 @@ export default function MainContainer({ currentUser }) {
           <h2>PostEdit</h2>
         </Route>
         <Route path='/create-post'>
-          <PostCreate />
+          <PostCreate handleFoodCreate={handleFoodCreate} />
         </Route>
         <Route path='/'>
           <MainFeed posts={posts} />

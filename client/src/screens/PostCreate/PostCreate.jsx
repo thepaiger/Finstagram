@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function PostCreate() {
+export default function PostCreate({ handleFoodCreate }) {
   const [formData, setFormData] = useState({
     img_url: '',
     caption: ''
@@ -16,7 +16,10 @@ export default function PostCreate() {
   };
 
   return (
-    <form>
+    <form onSubmit={(e) => {
+      e.preventDefault();
+      handleFoodCreate(formData);
+    }}>
       <h2>Upload an Image</h2>
       <label className='hidden'>
         Image URL
