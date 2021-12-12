@@ -10,7 +10,7 @@ export default function Layout({ children, currentUser, handleLogout }) {
     <div>
       {currentUser &&
         <nav>
-          <h3>{currentUser.username}</h3>
+          {/* <h3>{currentUser.username}</h3> */}
           <button onClick={handleLogout}>Logout</button>
         </nav>
       }

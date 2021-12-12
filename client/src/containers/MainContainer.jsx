@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 
 // Screens
 import MainFeed from '../screens/MainFeed/MainFeed';
+import PostCreate from '../screens/PostCreate/PostCreate';
 
 // Services
 import { getAllPosts } from '../services/posts';
@@ -22,7 +23,7 @@ export default function MainContainer({ currentUser }) {
   }, [currentUser])
 
   return (
-    <div>
+    <main>
       <Switch>
         <Route path='/profile/:user_id/feed'>
           <h2>SingleUserFeed</h2>
@@ -34,12 +35,12 @@ export default function MainContainer({ currentUser }) {
           <h2>PostEdit</h2>
         </Route>
         <Route path='/create-post'>
-          <h2>PostCreate</h2>
+          <PostCreate />
         </Route>
         <Route path='/'>
           <MainFeed posts={posts} />
         </Route>
       </Switch>
-    </div >
+    </main>
   )
 }
