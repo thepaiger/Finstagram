@@ -16,7 +16,7 @@ export default function PostEdit({ posts, handlePostUpdate, handlePostDelete }) 
       const singlePost = posts.find((post) => post.id === Number(post_id));
       setFormData({ caption: singlePost.caption });
       setImage(singlePost.img_url)
-      setImageAlt(`${singlePost.user.username}'s Post`)
+      setImageAlt(`${singlePost.user?.username}'s Post`)
     };
     if (posts.length) prefillFormData();
   }, [posts, post_id]);

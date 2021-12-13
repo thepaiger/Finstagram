@@ -6,6 +6,8 @@ import { Switch, Route, useHistory } from "react-router-dom";
 import MainFeed from "../screens/MainFeed/MainFeed";
 import PostCreate from "../screens/PostCreate/PostCreate";
 import PostEdit from "../screens/PostEdit/PostEdit";
+import SingleUserFeed from "../screens/SingleUserFeed/SingleUserFeed";
+import UserProfile from "../screens/UserProfile/UserProfile";
 
 // Services
 import { deletePost, getAllPosts, postPost, putPost } from "../services/posts";
@@ -41,7 +43,7 @@ export default function MainContainer({ currentUser }) {
 
   const handlePostDelete = async (post_id) => {
     await deletePost(post_id);
-    setPosts((prevState) => prevState.filter((post) => post.id !== post_id));
+    setPosts((prevState) => prevState.filter((post) => post.id !== Number(post_id)));
     history.push("/");
   };
 
@@ -49,10 +51,10 @@ export default function MainContainer({ currentUser }) {
     <main>
       <Switch>
         <Route path="/profile/:user_id/feed">
-          <h2>SingleUserFeed</h2>
+          <SingleUserFeed posts={posts} />
         </Route>
         <Route path="/profile/:user_id">
-          <h2>UserProfile</h2>
+          <UserProfile />
         </Route>
         <Route path="/edit-post/:post_id">
           <PostEdit
