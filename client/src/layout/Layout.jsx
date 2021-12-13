@@ -24,7 +24,7 @@ export default function Layout({ children, currentUser, handleLogout }) {
         ) : (
           <div>
             <Link to='/'><img src={homeIcon} alt='home icon' /></Link>
-            <Link to={`/profile/${currentUser}`}><img src={profileIcon} alt='profile icon' /></Link>
+            <Link to={`/profile/${currentUser.id}`}><img src={profileIcon} alt='profile icon' /></Link>
           </div>
         )
         }

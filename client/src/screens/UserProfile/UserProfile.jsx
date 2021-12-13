@@ -22,7 +22,7 @@ export default function UserProfile({ posts }) {
 
   useEffect(() => {
     const setUser = () => {
-      setSelectedUser(userPosts[0].user)
+      setSelectedUser(userPosts[0]?.user)
     };
     if (userPosts) setUser();
   }, [userPosts]);
