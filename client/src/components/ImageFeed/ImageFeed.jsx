@@ -19,9 +19,9 @@ export default function ImageFeed({ posts }) {
               </Link>
               <p>{post.caption}</p>
             </>
-          )};
+          )}
         </article>
-      ))};
+      ))}
     </div>
   )
 }
