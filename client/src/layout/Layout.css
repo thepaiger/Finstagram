@@ -1,0 +1,24 @@
+.layout {
+  height: 100vh;
+}
+
+footer {
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 73px;
+  border-top: solid 0.5px #212121;
+}
+
+.footer-account {
+  font-size: 11px;
+  color: #848484;
+}
+
+.footer-account-link {
+  color: #0995f6;
+  text-decoration: none;
+}

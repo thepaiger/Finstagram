@@ -6,22 +6,26 @@ import homeIcon from "./../assets/graphics/home-icon.svg";
 import profileIcon from "./../assets/graphics/profile-icon.svg";
 import logoutIcon from "./../assets/graphics/logout-icon.svg";
 
+// CSS
+import './Layout.css'
+
+
 export default function Layout({ children, currentUser, handleLogout }) {
   const location = useLocation();
 
   return (
-    <div>
+    <div className='layout'>
       {children}
       <footer>
         {!currentUser ? (
           <div>
             {location.pathname === "/sign-in" ? (
-              <p>
-                Don't have an account? <Link to="/sign-up">Sign Up.</Link>
+              <p className="footer-account">
+                Don't have an account? <Link to="/sign-up" className="footer-account-link">Sign Up.</Link>
               </p>
             ) : (
-              <p>
-                Already have an account? <Link to="/sign-in">Sign In.</Link>
+              <p className="footer-account">
+                Already have an account? <Link to="/sign-in" className="footer-account-link">Sign In.</Link>
               </p>
             )}
           </div>

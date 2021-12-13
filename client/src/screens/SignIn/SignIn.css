@@ -1,0 +1,19 @@
+/* Form */
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95vw;
+  margin: auto 0;
+}
+
+/* Header */
+.signin-finsta {
+  margin: 0;
+}
+
+/* Hide Labels */
+/* .hidden {
+  display: none;
+} */
