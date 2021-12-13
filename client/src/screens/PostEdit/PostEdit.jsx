@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 export default function PostEdit({ posts, handlePostUpdate, handlePostDelete }) {
   const [formData, setFormData] = useState({
     caption: ''
-  })
+  });
   const { caption } = formData;
   const [image, setImage] = useState(null);
   const [imageAlt, setImageAlt] = useState(null);

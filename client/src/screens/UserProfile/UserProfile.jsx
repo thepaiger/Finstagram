@@ -1,46 +1,60 @@
-import { Link } from 'react-router-dom';
+// Packages
+import { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 
-export default function UserProfile() {
+// Components
+import ImageGrid from '../../components/ImageGrid/ImageGrid';
+
+// Graphics
+import addIcon from './../../assets/graphics/add-icon.svg'
+
+export default function UserProfile({ posts }) {
+  const [userPosts, setUserPosts] = useState(null);
+  const [selectedUser, setSelectedUser] = useState(null);
+  const { user_id } = useParams();
+
+  useEffect(() => {
+    const setPosts = () => {
+      setUserPosts(posts.filter((post) => post.user.id === Number(user_id)))
+    };
+    if (posts.length) setPosts();
+  }, [posts, user_id]);
+
+  useEffect(() => {
+    const setUser = () => {
+      setSelectedUser(userPosts[0].user)
+    };
+    if (userPosts) setUser();
+  }, [userPosts]);
+
   return (
     <div>
-      <header>
-        <div>
-          <h1>{post.user.username}</h1>
-          <Link to='/create-post'><img src={addIcon} alt='create post icon' /></Link>
-        </div>
-        <div>
-          <div>
-            <img src={post.user.profile_pic_url} alt={`${post.user.username}'s Profile Picture`} />
+      {selectedUser?.username && (
+        <>
+          <header>
             <div>
-
-              <h6>Posts</h6>
+              <h1>{selectedUser?.name}</h1>
+              <Link to='/create-post'>
+                <img src={addIcon} alt='create post icon' />
+              </Link>
             </div>
-          </div>
-          <h6>{post.user.name}{post.user.pronouns}</h6>
-        </div>
-      </header>
+            <div>
+              <div>
+                <img src={selectedUser.profile_pic_url} alt={`${selectedUser.username}'s Profile Picture`} />
+                <div>
+                  <p>{userPosts.length}</p>
+                  <h6>Posts</h6>
+                </div>
+              </div>
+              <h6>{selectedUser.name}{selectedUser.pronouns}</h6>
+            </div>
+          </header>
+
+          <ImageGrid posts={userPosts} />
+        </>
+      )}
 
 
-    </div>
+    </div >
   )
 }
-
-<div>
-  {posts.map((post) => (
-    <article>
-      {post.user?.username && (
-        <>
-          <Link to={`/profile/${post.user.id}`}>
-            <img src={post.user.profile_pic_url} alt={`${post.user.username}'s Profile Picture`} />
-            <h4>{post.user.username}</h4>
-          </Link>
-          <img src={post.img_url} alt={`${post.user.username}'s Post`} />
-          <h6>{post.user.username}</h6>
-          <p>{post.caption}</p>
-        </>
-      )
-      }
-    </article>
-  ))
-  }
-</div>

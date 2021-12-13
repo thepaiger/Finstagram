@@ -1,6 +1,8 @@
+// Packages
 import { Link } from 'react-router-dom';
 
 export default function ImageFeed({ posts }) {
+
   return (
     <div>
       {posts.map((post) => (
@@ -12,14 +14,14 @@ export default function ImageFeed({ posts }) {
                 <h4>{post.user.username}</h4>
               </Link>
               <img src={post.img_url} alt={`${post.user.username}'s Post`} />
-              <h6>{post.user.username}</h6>
+              <Link to={`/profile/${post.user.id}`}>
+                <h6>{post.user.username}</h6>
+              </Link>
               <p>{post.caption}</p>
             </>
-          )
-          }
+          )};
         </article>
-      ))
-      }
+      ))};
     </div>
   )
 }

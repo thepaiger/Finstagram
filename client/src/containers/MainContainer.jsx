@@ -54,7 +54,7 @@ export default function MainContainer({ currentUser }) {
           <SingleUserFeed posts={posts} />
         </Route>
         <Route path="/profile/:user_id">
-          <UserProfile />
+          <UserProfile posts={posts} />
         </Route>
         <Route path="/edit-post/:post_id">
           <PostEdit
