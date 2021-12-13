@@ -15,7 +15,9 @@ export default function Layout({ children, currentUser, handleLogout }) {
 
   return (
     <div className='layout'>
-      {children}
+      <main>
+        {children}
+      </main>
       <footer>
         {!currentUser ? (
           <div>

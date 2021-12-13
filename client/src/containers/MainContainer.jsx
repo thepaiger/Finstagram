@@ -49,7 +49,7 @@ export default function MainContainer({ currentUser }) {
   };
 
   return (
-    <main>
+    <div>
       <Switch>
         <Route path="/profile/:user_id/feed">
           <SingleUserFeed posts={posts} />
@@ -71,6 +71,6 @@ export default function MainContainer({ currentUser }) {
           <MainFeed posts={posts} />
         </Route>
       </Switch>
-    </main >
+    </div>
   );
 }

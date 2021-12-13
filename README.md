@@ -90,6 +90,7 @@ src
             |__ ImageFeed.css
             |__ ImageFeed.jsx
 |__ containers/
+      |__ MainContainer.css
       |__ MainContainer.jsx
 |__ layout/
       |__ Layout.css
