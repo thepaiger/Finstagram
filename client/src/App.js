@@ -1,6 +1,6 @@
 // Packages
 import { useState, useEffect } from 'react';
-import { Switch, Route, useHistory } from 'react-router-dom';
+import { Switch, Redirect, Route, useHistory } from 'react-router-dom';
 
 // CSS
 import './App.css';
@@ -50,13 +50,22 @@ function App() {
       <Layout currentUser={currentUser} handleLogout={handleLogout} >
         <Switch>
           <Route path='/sign-in'>
-            <SignIn handleSignIn={handleSignIn} />
+            {currentUser ?
+              <Redirect to='/' />
+              : <SignIn handleSignIn={handleSignIn} />
+            }
           </Route>
           <Route path='/sign-up'>
-            <SignUp handleSignUp={handleSignUp} />
+            {currentUser ?
+              <Redirect to='/' />
+              : <SignUp handleSignUp={handleSignUp} />
+            }
           </Route>
           <Route path='/'>
-            <MainContainer currentUser={currentUser} />
+            {currentUser ?
+              <MainContainer currentUser={currentUser} />
+              : <Redirect to='/sign-in' />
+            }
           </Route>
         </Switch>
       </Layout>
