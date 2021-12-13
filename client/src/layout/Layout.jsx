@@ -1,16 +1,17 @@
 // Packages
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 // Graphics
 import homeIcon from './../assets/graphics/home-icon.svg'
 import profileIcon from './../assets/graphics/profile-icon.svg'
 
 export default function Layout({ children, currentUser, handleLogout }) {
+  const location = useLocation();
+
   return (
     <div>
       {currentUser &&
         <nav>
-          {/* <h3>{currentUser.username}</h3> */}
           <button onClick={handleLogout}>Logout</button>
         </nav>
       }
@@ -18,8 +19,10 @@ export default function Layout({ children, currentUser, handleLogout }) {
       <footer>
         {!currentUser ? (
           <div>
-            <p>Don't have an account? <Link to='/sign-up'>Sign Up.</Link></p>
-            <p>Already have an account? <Link to='/sign-in'>Sign In.</Link></p>
+            {(location.pathname === '/sign-in') ?
+              <p>Don't have an account? <Link to='/sign-up'>Sign Up.</Link></p>
+              : <p>Already have an account? <Link to='/sign-in'>Sign In.</Link></p>
+            }
           </div>
         ) : (
           <div>
