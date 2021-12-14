@@ -1,0 +1,78 @@
+.img-feed {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.img-feed-post {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+/* =====POST HEADING===== */
+.img-feed-heading {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 0 9px 0;
+}
+
+/* PROFILE PICTURE */
+.img-feed-prof-pic-div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 9px;
+}
+
+.img-feed-prof-pic {
+  width: 100%;
+  height: 100%;
+}
+
+/* HEADING USERNAME */
+.img-feed-username-top {
+  text-decoration: none;
+  color: #fafafa;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* =====POST IMAGE===== */
+.img-feed-pic-div {
+  width: 100%;
+  height: fit-content;
+}
+
+.img-feed-pic {
+  width: 100%;
+  height: 100%;
+}
+
+/* =====POST DETAILS===== */
+.img-feed-details {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 12px 0 18px 0;
+}
+
+.img-feed-username-bottom {
+  text-decoration: none;
+  color: #fafafa;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin: 0 5px 0 15px;
+}
+
+.img-feed-caption {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
