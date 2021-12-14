@@ -33,7 +33,7 @@ export default function UserProfile({ posts }) {
         <>
           <header>
             <div>
-              <h1>{selectedUser?.name}</h1>
+              <h1>{selectedUser?.username}</h1>
               <Link to='/create-post'>
                 <img src={addIcon} alt='create post icon' />
               </Link>
