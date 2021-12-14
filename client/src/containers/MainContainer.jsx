@@ -6,7 +6,6 @@ import { Switch, Route, useHistory } from "react-router-dom";
 import MainFeed from "../screens/MainFeed/MainFeed";
 import PostCreate from "../screens/PostCreate/PostCreate";
 import PostEdit from "../screens/PostEdit/PostEdit";
-import SignIn from "../screens/SignIn/SignIn";
 import SingleUserFeed from "../screens/SingleUserFeed/SingleUserFeed";
 import UserProfile from "../screens/UserProfile/UserProfile";
 

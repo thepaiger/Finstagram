@@ -55,10 +55,7 @@
 
 /* =====POST DETAILS===== */
 .img-feed-details {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  margin: 12px 0 18px 0;
+  margin: 12px 15px 18px 15px;
 }
 
 .img-feed-username-bottom {
@@ -67,7 +64,7 @@
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.5px;
-  margin: 0 5px 0 15px;
+  margin: 0 5px 0 0;
 }
 
 .img-feed-caption {

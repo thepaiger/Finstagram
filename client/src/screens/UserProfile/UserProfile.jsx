@@ -40,7 +40,7 @@ export default function UserProfile({ posts }) {
             </div>
             <div>
               <div>
-                <img src={selectedUser.profile_pic_url} alt={`${selectedUser.username}'s Profile Picture`} />
+                <img src={selectedUser.profile_pic_url} alt={`${selectedUser.username}'s Profile`} />
                 <div>
                   <p>{userPosts.length}</p>
                   <h6>Posts</h6>

@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import './ImageFeed.css'
 
 export default function ImageFeed({ posts }) {
-
   return (
     <div className="img-feed">
       {posts.map((post) => (
@@ -14,7 +13,7 @@ export default function ImageFeed({ posts }) {
             <>
               <Link to={`/profile/${post.user.id}`} className="img-feed-heading">
                 <div className="img-feed-prof-pic-div">
-                  <img className="img-feed-prof-pic" src={post.user.profile_pic_url} alt={`${post.user.username}'s Profile Picture`} />
+                  <img className="img-feed-prof-pic" src={post.user.profile_pic_url} alt={`${post.user.username}'s Profile`} />
                 </div>
                 <h4 className="img-feed-username-top">{post.user.username}</h4>
               </Link>
@@ -22,10 +21,12 @@ export default function ImageFeed({ posts }) {
                 <img className="img-feed-pic" src={post.img_url} alt={`${post.user.username}'s Post`} />
               </div>
               <div className="img-feed-details">
-                <Link to={`/profile/${post.user.id}`}>
-                  <h6 className="img-feed-username-bottom">{post.user.username}</h6>
-                </Link>
-                <p className="img-feed-caption">{post.caption}</p>
+                <p className="img-feed-caption">
+                  <Link to={`/profile/${post.user.id}`} className="img-feed-username-bottom">
+                    {post.user.username}
+                  </Link>
+                  {post.caption}
+                </p>
               </div>
             </>
           )}
