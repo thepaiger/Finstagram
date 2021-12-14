@@ -1,0 +1,14 @@
+.main-feed-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 53px 18px 28px 15px;
+}
+
+.main-feed-heading {
+  font-family: "Lobster", cursive;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
