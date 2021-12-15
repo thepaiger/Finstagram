@@ -18,7 +18,7 @@
 }
 
 main {
-  /* height: calc(100% - 73px); */
+  height: calc(100% - 73px);
 }
 
 footer > div {
