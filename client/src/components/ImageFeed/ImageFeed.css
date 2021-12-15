@@ -77,3 +77,27 @@
   font-weight: 400;
   margin: 0;
 }
+
+/* =====TABLET MEDIA QUERY===== */
+@media (min-width: 481px) {
+  /* ENGLARGE PROFILE PICTURE */
+  .img-feed-prof-pic-div {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* ENGLARGE HEADING USERNAME */
+  .img-feed-username-top {
+    font-size: 18px;
+  }
+
+  /* ENGLARGE BOTTOM USERNAME */
+  .img-feed-username-bottom {
+    font-size: 16px;
+  }
+
+  /* ENGLARGE CAPTION */
+  .img-feed-caption {
+    font-size: 16px;
+  }
+}
