@@ -44,7 +44,7 @@ export default function PostEdit({ posts, handlePostUpdate, handlePostDelete }) 
       <div className="edit-img-div">
         <img className="edit-img" src={image} alt={imageAlt} />
       </div>
-      <label className='hidden' htmlForm="edit-caption">
+      <label className='hidden' htmlFor="edit-caption">
         Caption
       </label>
       <textarea
