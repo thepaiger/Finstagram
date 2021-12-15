@@ -1,0 +1,80 @@
+.user-profile {
+}
+
+.user-profile-header {
+}
+
+.user-profile-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 53px 18px 28px 15px;
+}
+
+.user-profile-username {
+  font-size: 20px;
+  margin: 0;
+}
+
+.user-profile-create-icon {
+}
+
+.user-profile-details {
+  display: flex;
+  flex-direction: column;
+  margin: 0 45px 0 14px;
+}
+
+.user-profile-pic-posts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-profile-prof-pic {
+  width: 77px;
+  height: 77px;
+  border-radius: 50%;
+}
+
+.user-profile-posts-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
+  text-align: center;
+}
+
+.user-profile-post-count {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.user-profile-posts {
+  margin: 7px 0 0 0;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.user-profile-name-pronouns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 12px 0 7px 0;
+}
+
+.user-profile-name {
+  display: inline;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0 4px 0 0;
+}
+.user-profile-pronouns {
+  display: inline;
+  font-size: 13px;
+  font-weight: 300;
+  color: #a8a8a8;
+  margin: 0;
+}

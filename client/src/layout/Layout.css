@@ -2,6 +2,21 @@
   min-height: 100vh;
 }
 
+.layout-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 53px 18px 28px 15px;
+}
+
+.layout-heading {
+  font-family: "Lobster", cursive;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+
 main {
   /* height: calc(100% - 73px); */
 }

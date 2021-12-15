@@ -6,6 +6,7 @@ import homeIcon from "./../assets/graphics/home-icon.svg";
 import profileIcon from "./../assets/graphics/profile-icon.svg";
 import logoutIcon from "./../assets/graphics/logout-icon.svg";
 
+
 // CSS
 import './Layout.css'
 
@@ -45,6 +46,6 @@ export default function Layout({ children, currentUser, handleLogout }) {
           </div>
         )}
       </footer>
-    </div>
+    </div >
   );
 }

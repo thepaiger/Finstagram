@@ -8,6 +8,9 @@ import ImageGrid from '../../components/ImageGrid/ImageGrid';
 // Graphics
 import addIcon from './../../assets/graphics/add-icon.svg'
 
+// CSS
+import './UserProfile.css'
+
 export default function UserProfile({ posts }) {
   const [userPosts, setUserPosts] = useState(null);
   const [selectedUser, setSelectedUser] = useState(null);
@@ -28,25 +31,28 @@ export default function UserProfile({ posts }) {
   }, [userPosts]);
 
   return (
-    <div>
+    <div className="user-profile">
       {selectedUser?.username && (
         <>
-          <header>
-            <div>
-              <h1>{selectedUser?.username}</h1>
+          <header className="user-profile-header">
+            <div className="user-profile-heading">
+              <h1 className="user-profile-username">{selectedUser?.username}</h1>
               <Link to='/create-post'>
-                <img src={addIcon} alt='create post icon' />
+                <img className="user-profile-create-icon" src={addIcon} alt='create post icon' />
               </Link>
             </div>
-            <div>
-              <div>
-                <img src={selectedUser.profile_pic_url} alt={`${selectedUser.username}'s Profile`} />
-                <div>
-                  <p>{userPosts.length}</p>
-                  <h6>Posts</h6>
+            <div className="user-profile-details">
+              <div className="user-profile-pic-posts">
+                <img className="user-profile-prof-pic" src={selectedUser.profile_pic_url} alt={`${selectedUser.username}'s Profile`} />
+                <div className="user-profile-posts-div">
+                  <p className="user-profile-post-count">{userPosts.length}</p>
+                  <h6 className="user-profile-posts">Posts</h6>
                 </div>
               </div>
-              <h6>{selectedUser.name}{selectedUser.pronouns}</h6>
+              <div className="user-profile-name-pronouns">
+                <h6 className="user-profile-name">{selectedUser.name}</h6>
+                <p className="user-profile-pronouns">{selectedUser.pronouns}</p>
+              </div>
             </div>
           </header>
 
