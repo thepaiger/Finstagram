@@ -37,7 +37,7 @@ export default function SingleUserFeed({ posts, currentUser }) {
           <h1 className="single-user-feed-heading">Finstagram</h1>
         </Link>
         <Link to='/create-post'>
-          <img src={addIcon} alt='create post icon' />
+          <img className="single-user-feed-create-post" src={addIcon} alt='create post icon' />
         </Link>
       </header>
 

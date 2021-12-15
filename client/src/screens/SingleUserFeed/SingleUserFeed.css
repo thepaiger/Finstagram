@@ -13,3 +13,22 @@
   font-weight: 400;
   margin: 0;
 }
+
+/* =====TABLET MEDIA QUERY===== */
+@media (min-width: 481px) {
+  /* HEADER - INCREASE RIGHT MARGIN */
+  .single-user-feed-header {
+    margin: 0 25px 28px 15px;
+  }
+
+  /* ENLARGE FINSTAGRAM HEADING */
+  .single-user-feed-heading {
+    font-size: 36px;
+  }
+
+  /* ENLARGE CREATE POST ICON */
+  .single-user-feed-create-post {
+    width: 130%;
+    height: 130%;
+  }
+}
