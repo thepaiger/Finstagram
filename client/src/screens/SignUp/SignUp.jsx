@@ -1,6 +1,9 @@
 // Packages
 import { useState } from "react";
 
+// CSS
+import './SignUp.css'
+
 export default function SignUp({ handleSignUp }) {
   const [formData, setFormData] = useState({
     email: "",
@@ -29,15 +32,15 @@ export default function SignUp({ handleSignUp }) {
         handleSignUp(formData);
       }}
     >
-      <h1 className="signup-heading">Finstagram</h1>
+      <h1 className="signup-heading">Enter Your Information</h1>
       <label className="hidden" htmlFor="signup-email">
-        Email
+        Email Address
       </label>
       <input
         className="signup-email"
         id="signup-email"
         type="text"
-        placeholder="Email"
+        placeholder="Email Address*"
         name="email"
         value={email}
         onChange={handleChange}
@@ -50,7 +53,7 @@ export default function SignUp({ handleSignUp }) {
         className="signup-name"
         id="signup-name"
         type="text"
-        placeholder="Name"
+        placeholder="Full Name*"
         name="name"
         value={name}
         onChange={handleChange}
@@ -75,7 +78,7 @@ export default function SignUp({ handleSignUp }) {
         className="signup-username"
         id="signup-username"
         type="text"
-        placeholder="Username"
+        placeholder="Username*"
         name="username"
         value={username}
         onChange={handleChange}
@@ -88,7 +91,7 @@ export default function SignUp({ handleSignUp }) {
         className="signup-prof-pic"
         id="signup-prof-pic"
         type="text"
-        placeholder="Profile Picture URL"
+        placeholder="Profile Picture URL*"
         name="profile_pic_url"
         value={profile_pic_url}
         onChange={handleChange}
@@ -101,7 +104,7 @@ export default function SignUp({ handleSignUp }) {
         className="signup-password"
         id="signup-password"
         type="password"
-        placeholder="Password"
+        placeholder="Password*"
         name="password"
         value={password}
         onChange={handleChange}

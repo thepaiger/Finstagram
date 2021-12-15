@@ -1,7 +1,24 @@
-.signin-password {
-  width: 90%;
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 82%;
+  /* height: calc(100vh - 73px); */
+  margin: auto;
+}
+
+.signup-heading {
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  margin: 80px 0 73px 0;
+}
+
+.signup-email {
+  width: 100%;
   height: 40px;
-  margin: 11px 0 55px 0;
+  margin: 0 0 14px 0;
   padding: 0 15px;
   font-family: "Roboto", "Segoe UI", sans-serif;
   font-size: 12px;
@@ -10,9 +27,85 @@
   color: #a8a8a8;
   border: solid 0.5px #2d2d2d;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
-.signin-btn {
+.signup-name {
+  width: 100%;
+  height: 40px;
+  margin: 0 0 14px 0;
+  padding: 0 15px;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  background-color: #121212;
+  color: #a8a8a8;
+  border: solid 0.5px #2d2d2d;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.signup-pronouns {
+  width: 100%;
+  height: 40px;
+  margin: 0 0 14px 0;
+  padding: 0 15px;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  background-color: #121212;
+  color: #a8a8a8;
+  border: solid 0.5px #2d2d2d;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.signup-username {
+  width: 100%;
+  height: 40px;
+  margin: 0 0 14px 0;
+  padding: 0 15px;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  background-color: #121212;
+  color: #a8a8a8;
+  border: solid 0.5px #2d2d2d;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.signup-prof-pic {
+  width: 100%;
+  height: 40px;
+  margin: 0 0 14px 0;
+  padding: 0 15px;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  background-color: #121212;
+  color: #a8a8a8;
+  border: solid 0.5px #2d2d2d;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.signup-password {
+  width: 100%;
+  height: 40px;
+  margin: 0 0 14px 0;
+  padding: 0 15px;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  background-color: #121212;
+  color: #a8a8a8;
+  border: solid 0.5px #2d2d2d;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.signup-btn {
   width: 100%;
   height: 40px;
   font-family: "Roboto", "Segoe UI", sans-serif;
@@ -22,31 +115,5 @@
   color: #a8a8a8;
   border: none;
   border-radius: 5px;
-}
-
-.signup-form {
-}
-
-.signup-heading {
-}
-
-.signup-email {
-}
-
-.signup-name {
-}
-
-.signup-pronouns {
-}
-
-.signup-username {
-}
-
-.signup-prof-pic {
-}
-
-.signup-password {
-}
-
-.signup-btn {
+  box-sizing: border-box;
 }
