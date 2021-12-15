@@ -3,7 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 53px 18px 28px 15px;
+  margin: 0 18px 28px 15px;
+  padding: 53px 0 0 0;
 }
 
 .main-feed-heading {
