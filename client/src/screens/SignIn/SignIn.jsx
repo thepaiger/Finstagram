@@ -27,30 +27,36 @@ export default function SignIn({ handleSignIn }) {
         handleSignIn(formData);
       }}
     >
-      <h1 className="signin-finsta">Finstagram</h1>
-      <label className="hidden">
+      <h1 className="signin-heading">Finstagram</h1>
+      <label className="hidden" htmlFor="signin-username">
         Username
-        <input
-          type="text"
-          placeholder="Username"
-          name="username"
-          value={username}
-          onChange={handleChange}
-          required
-        />
       </label>
-      <label className="hidden">
+      <input
+        className="signin-username"
+        id="signin-username"
+        type="text"
+        placeholder="Username"
+        name="username"
+        value={username}
+        onChange={handleChange}
+        required
+      />
+
+      <label className="hidden" htmlFor="signin-password">
         Password
-        <input
-          type="password"
-          placeholder="Password"
-          name="password"
-          value={password}
-          onChange={handleChange}
-          required
-        />
       </label>
-      <button>Log In</button>
+      <input
+        className="signin-password"
+        id="signin-password"
+        type="password"
+        placeholder="Password"
+        name="password"
+        value={password}
+        onChange={handleChange}
+        required
+      />
+
+      <button className="signin-btn">Log In</button>
     </form>
   );
 }

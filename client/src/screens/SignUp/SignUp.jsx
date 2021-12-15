@@ -23,78 +23,91 @@ export default function SignUp({ handleSignUp }) {
 
   return (
     <form
+      className="signup-form"
       onSubmit={(e) => {
         e.preventDefault();
         handleSignUp(formData);
       }}
     >
-      <h1>Finstagram</h1>
-      <label className="hidden">
+      <h1 className="signup-heading">Finstagram</h1>
+      <label className="hidden" htmlFor="signup-email">
         Email
-        <input
-          type="text"
-          placeholder="Email"
-          name="email"
-          value={email}
-          onChange={handleChange}
-          required
-        />
       </label>
-      <label className="hidden">
+      <input
+        className="signup-email"
+        id="signup-email"
+        type="text"
+        placeholder="Email"
+        name="email"
+        value={email}
+        onChange={handleChange}
+        required
+      />
+      <label className="hidden" htmlFor="signup-name">
         Name
-        <input
-          type="text"
-          placeholder="Name"
-          name="name"
-          value={name}
-          onChange={handleChange}
-          required
-        />
       </label>
-      <label className="hidden">
+      <input
+        className="signup-name"
+        id="signup-name"
+        type="text"
+        placeholder="Name"
+        name="name"
+        value={name}
+        onChange={handleChange}
+        required
+      />
+      <label className="hidden" htmlFor="signup-pronouns">
         Pronouns
-        <input
-          type="text"
-          placeholder="Pronouns"
-          name="pronouns"
-          value={pronouns}
-          onChange={handleChange}
-        />
       </label>
-      <label className="hidden">
+      <input
+        className="signup-pronouns"
+        id="signup-pronouns"
+        type="text"
+        placeholder="Pronouns"
+        name="pronouns"
+        value={pronouns}
+        onChange={handleChange}
+      />
+      <label className="hidden" htmlFor="signup-username">
         Username
-        <input
-          type="text"
-          placeholder="Username"
-          name="username"
-          value={username}
-          onChange={handleChange}
-          required
-        />
       </label>
-      <label className="hidden">
+      <input
+        className="signup-username"
+        id="signup-username"
+        type="text"
+        placeholder="Username"
+        name="username"
+        value={username}
+        onChange={handleChange}
+        required
+      />
+      <label className="hidden" htmlFor="signup-prof-pic">
         Profile Picture URL
-        <input
-          type="text"
-          placeholder="Profile Picture URL"
-          name="profile_pic_url"
-          value={profile_pic_url}
-          onChange={handleChange}
-          required
-        />
       </label>
-      <label className="hidden">
+      <input
+        className="signup-prof-pic"
+        id="signup-prof-pic"
+        type="text"
+        placeholder="Profile Picture URL"
+        name="profile_pic_url"
+        value={profile_pic_url}
+        onChange={handleChange}
+        required
+      />
+      <label className="hidden" htmlFor="signup-password">
         Password
-        <input
-          type="password"
-          placeholder="Password"
-          name="password"
-          value={password}
-          onChange={handleChange}
-          required
-        />
       </label>
-      <button>Sign Up</button>
+      <input
+        className="signup-password"
+        id="signup-password"
+        type="password"
+        placeholder="Password"
+        name="password"
+        value={password}
+        onChange={handleChange}
+        required
+      />
+      <button className="signup-btn">Sign Up</button>
     </form>
   );
 }

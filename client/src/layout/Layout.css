@@ -18,6 +18,8 @@
 }
 
 main {
+  /* min-height: calc(100vh-73px); */
+  min-height: 100vh;
   padding-bottom: 73px;
 }
 

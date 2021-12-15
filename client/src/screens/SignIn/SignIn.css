@@ -1,19 +1,55 @@
-/* Form */
 .signin-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 95vw;
-  margin: auto 0;
+  width: 92%;
+  height: calc(100vh - 73px);
+  margin: auto;
 }
 
-/* Header */
-.signin-finsta {
-  margin: 0;
+.signin-heading {
+  font-family: "Lobster", cursive;
+  font-size: 36px;
+  font-weight: 400;
+  margin: 0 0 38px 0;
 }
 
-/* Hide Labels */
-/* .hidden {
-  display: none;
-} */
+.signin-username {
+  width: 90%;
+  height: 40px;
+  padding: 0 15px;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  background-color: #121212;
+  color: #a8a8a8;
+  border: solid 0.5px #2d2d2d;
+  border-radius: 5px;
+}
+
+.signin-password {
+  width: 90%;
+  height: 40px;
+  margin: 11px 0 55px 0;
+  padding: 0 15px;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  background-color: #121212;
+  color: #a8a8a8;
+  border: solid 0.5px #2d2d2d;
+  border-radius: 5px;
+}
+
+.signin-btn {
+  width: 100%;
+  height: 40px;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  background-color: #02497b;
+  color: #a8a8a8;
+  border: none;
+  border-radius: 5px;
+}
