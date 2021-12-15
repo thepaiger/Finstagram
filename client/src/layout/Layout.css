@@ -18,8 +18,8 @@
 }
 
 main {
-  /* min-height: calc(100vh-73px); */
-  min-height: 100vh;
+  min-height: calc(100vh-73px);
+  /* min-height: 100vh; */
   padding-bottom: 73px;
 }
 
@@ -53,4 +53,6 @@ footer > div {
   text-decoration: none;
 }
 
-/* add cursor: pointer to logout button */
+.logout-btn {
+  cursor: pointer;
+}

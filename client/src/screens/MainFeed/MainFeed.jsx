@@ -11,7 +11,6 @@ import ImageFeed from '../../components/ImageFeed/ImageFeed';
 import './MainFeed.css'
 
 export default function MainFeed({ posts }) {
-  console.log(posts)
   return (
     <div className="main-feed">
       <header className="main-feed-header">

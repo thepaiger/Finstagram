@@ -8,7 +8,7 @@ export default function ImageGrid({ posts }) {
   return (
     <div className="img-grid">
       {posts.map((post) => (
-        <article className="img-grid-post">
+        <article className="img-grid-post" key={`imagegrid ${post.id}`}>
           {post.user?.username && (
             <Link to={`/profile/${post.user.id}/feed`}>
               <img className="img-grid-pic" src={post.img_url} alt={`${post.user.username}'s Post`} />

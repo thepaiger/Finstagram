@@ -13,7 +13,7 @@ export default function ImageFeed({ posts, currentUser }) {
   return (
     <div className="img-feed">
       {posts.map((post) => (
-        <article className="img-feed-post">
+        <article className="img-feed-post" key={`imagefeed ${post.id}`}>
           {post.user?.username && (
             <>
               <div className="img-feed-heading">
