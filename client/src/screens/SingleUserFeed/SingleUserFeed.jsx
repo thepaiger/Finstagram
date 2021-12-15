@@ -18,7 +18,7 @@ export default function SingleUserFeed({ posts, currentUser }) {
 
   useEffect(() => {
     const setPosts = () => {
-      setUserPosts(posts.filter((post) => post.user.id === Number(user_id)))
+      setUserPosts(posts.filter((post) => post.user?.id === Number(user_id)))
     };
     if (posts.length) setPosts();
   }, [posts, user_id]);
