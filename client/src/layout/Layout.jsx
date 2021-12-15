@@ -35,10 +35,10 @@ export default function Layout({ children, currentUser, handleLogout }) {
         ) : (
           <div>
             <Link to="/">
-              <img src={homeIcon} alt="home icon" />
+              <img className="home-btn" src={homeIcon} alt="home icon" />
             </Link>
             <Link to={`/profile/${currentUser.id}`}>
-              <img src={profileIcon} alt="profile icon" />
+              <img className="profile-btn" src={profileIcon} alt="profile icon" />
             </Link>
             {location.pathname === `/profile/${currentUser.id}` ? (
               <img className="logout-btn" onClick={handleLogout} src={logoutIcon} alt="logout icon" />

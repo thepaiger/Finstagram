@@ -19,7 +19,6 @@
 
 main {
   min-height: calc(100vh-73px);
-  /* min-height: 100vh; */
   padding-bottom: 73px;
 }
 
@@ -55,4 +54,19 @@ footer > div {
 
 .logout-btn {
   cursor: pointer;
+}
+
+/* =====TABLET MEDIA QUERY===== */
+@media (min-width: 481px) {
+  /* ENLARGE FOOTER BUTTONS */
+  .home-btn,
+  .profile-btn {
+    width: 130%;
+    height: 130%;
+  }
+
+  .logout-btn {
+    width: 26px;
+    height: 26px;
+  }
 }
