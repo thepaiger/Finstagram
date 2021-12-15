@@ -53,8 +53,6 @@ export default function PostEdit({ posts, handlePostUpdate, handlePostDelete }) 
         placeholder="Update caption..."
         name="caption"
         value={caption}
-        rows='10'
-        cols='30'
         onChange={handleChange}
         required
       />

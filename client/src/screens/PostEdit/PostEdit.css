@@ -11,6 +11,7 @@
 .edit-heading {
   margin: 80px 0 38px 0;
   font-size: 24px;
+  font-weight: 300;
 }
 
 .edit-img-div {
@@ -25,17 +26,40 @@
 .edit-caption {
   display: inline;
   width: 100%;
+  height: 120px;
   margin: 20px 0 15px 0;
+  padding: 22px 15px;
   box-sizing: border-box;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  background-color: #121212;
+  color: #a8a8a8;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  border: solid 0.5px #2d2d2d;
+  border-radius: 5px;
 }
 
 .edit-button {
   width: 100%;
   height: 40px;
   margin: 0 0 15px 0;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  background-color: #02497b;
+  color: #a8a8a8;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 5px;
 }
 
 .delete-button {
   width: 100%;
   height: 40px;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  background-color: #7b0202;
+  color: #a8a8a8;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 5px;
 }
