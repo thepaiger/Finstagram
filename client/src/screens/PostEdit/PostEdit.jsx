@@ -2,6 +2,9 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+// CSS
+import './PostEdit.css'
+
 export default function PostEdit({ posts, handlePostUpdate, handlePostDelete }) {
   const [formData, setFormData] = useState({
     caption: ''
@@ -31,27 +34,32 @@ export default function PostEdit({ posts, handlePostUpdate, handlePostDelete }) 
 
   return (
     <form
+      className="edit-form"
       onSubmit={(e) => {
         e.preventDefault();
         handlePostUpdate(post_id, formData);
       }}
     >
-      <h2>Edit Post</h2>
-      <img src={image} alt={imageAlt} />
-      <label className='hidden'>
+      <h2 className="edit-heading">Edit Post</h2>
+      <div className="edit-img-div">
+        <img className="edit-img" src={image} alt={imageAlt} />
+      </div>
+      <label className='hidden' htmlForm="edit-caption">
         Caption
-        <textarea
-          placeholder="Update caption..."
-          name="caption"
-          value={caption}
-          rows='10'
-          cols='30'
-          onChange={handleChange}
-          required
-        />
       </label>
-      <button>Share</button>
-      <button onClick={() => handlePostDelete(post_id)}>Delete Post</button>
+      <textarea
+        className="edit-caption"
+        id="edit-caption"
+        placeholder="Update caption..."
+        name="caption"
+        value={caption}
+        rows='10'
+        cols='30'
+        onChange={handleChange}
+        required
+      />
+      <button className="edit-button">Share</button>
+      <button className="delete-button" onClick={() => handlePostDelete(post_id)}>Delete Post</button>
     </form>
   )
 }
