@@ -11,7 +11,7 @@ import addIcon from './../../assets/graphics/add-icon.svg'
 // CSS
 import './UserProfile.css'
 
-export default function UserProfile({ posts }) {
+export default function UserProfile({ posts, currentUser }) {
   const [userPosts, setUserPosts] = useState(null);
   const [selectedUser, setSelectedUser] = useState(null);
   const { user_id } = useParams();
@@ -32,7 +32,7 @@ export default function UserProfile({ posts }) {
 
   return (
     <div className="user-profile">
-      {selectedUser?.username && (
+      {selectedUser?.username ? (
         <>
           <header className="user-profile-header">
             <div className="user-profile-heading">
@@ -58,8 +58,31 @@ export default function UserProfile({ posts }) {
 
           <ImageGrid posts={userPosts} />
         </>
+      ) : (
+        <>
+          <header className="user-profile-header">
+            <div className="user-profile-heading">
+              <h1 className="user-profile-username">{currentUser.username}</h1>
+              <Link to='/create-post'>
+                <img className="user-profile-create-icon" src={addIcon} alt='create post icon' />
+              </Link>
+            </div>
+            <div className="user-profile-details">
+              <div className="user-profile-pic-posts">
+                <img className="user-profile-prof-pic" src={currentUser.profile_pic_url} alt={`${currentUser.username}'s Profile`} />
+                <div className="user-profile-posts-div">
+                  <p className="user-profile-post-count">0</p>
+                  <h6 className="user-profile-posts">Posts</h6>
+                </div>
+              </div>
+              <div className="user-profile-name-pronouns">
+                <h6 className="user-profile-name">{currentUser.name}</h6>
+                <p className="user-profile-pronouns">{currentUser.pronouns}</p>
+              </div>
+            </div>
+          </header>
+        </>
       )}
-
 
     </div >
   )

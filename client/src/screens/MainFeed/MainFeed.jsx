@@ -18,7 +18,7 @@ export default function MainFeed({ posts }) {
           <h1 className="main-feed-heading">Finstagram</h1>
         </Link>
         <Link to='/create-post'>
-          <img src={addIcon} alt='create post icon' />
+          <img className="main-feed-create-post" src={addIcon} alt='create post icon' />
         </Link>
       </header>
 

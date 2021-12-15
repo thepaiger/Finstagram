@@ -1,3 +1,4 @@
+/* HEADER */
 .main-feed-header {
   display: flex;
   flex-direction: row;
@@ -7,9 +8,30 @@
   padding: 53px 0 0 0;
 }
 
+/* FINSTAGRAM HEADING */
 .main-feed-heading {
   font-family: "Lobster", cursive;
   font-size: 24px;
   font-weight: 400;
   margin: 0;
+}
+
+/* =====TABLET MEDIA QUERY===== */
+@media (min-width: 481px) {
+  /* HEADER - INCREASE RIGHT MARGIN */
+  .main-feed-header {
+    margin: 0 25px 28px 15px;
+  }
+
+  /* ENLARGE FINSTAGRAM HEADING */
+  .main-feed-heading {
+    font-size: 36px;
+  }
+
+  /* ENLARGE CREATE POST ICON */
+  .main-feed-create-post {
+    width: 130%;
+    height: 130%;
+    /* margin: 0 20px 0 0; */
+  }
 }
