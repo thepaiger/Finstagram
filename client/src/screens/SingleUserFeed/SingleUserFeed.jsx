@@ -11,7 +11,7 @@ import ImageFeed from '../../components/ImageFeed/ImageFeed';
 // CSS
 import './SingleUserFeed.css'
 
-export default function SingleUserFeed({ posts }) {
+export default function SingleUserFeed({ posts, currentUser }) {
   const [userPosts, setUserPosts] = useState(null);
   const [selectedUser, setSelectedUser] = useState(null);
   const { user_id } = useParams();
@@ -40,7 +40,7 @@ export default function SingleUserFeed({ posts }) {
       </header>
 
       {selectedUser?.username && (
-        <ImageFeed posts={userPosts} />
+        <ImageFeed posts={userPosts} currentUser={currentUser} />
       )}
     </div>
   )
