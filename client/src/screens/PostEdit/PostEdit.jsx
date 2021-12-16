@@ -33,7 +33,7 @@ export default function PostEdit({ posts, handlePostUpdate, handlePostDelete }) 
   };
 
   return (
-    <div>
+    <div className="edit-div">
       <form
         className="edit-form"
         onSubmit={(e) => {

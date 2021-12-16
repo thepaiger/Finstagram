@@ -1,4 +1,4 @@
-.edit-form {
+.edit-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,6 +6,15 @@
   width: 82%;
   height: 100%;
   margin: auto;
+  padding: 0 0 73px 0;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .edit-heading {
