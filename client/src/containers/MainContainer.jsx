@@ -22,8 +22,6 @@ export default function MainContainer({ currentUser }) {
       setPosts(postList);
     };
     if (currentUser) fetchPosts();
-    // test if this works
-    // (currentUser && fetchPosts());
   }, [currentUser]);
 
   const handlePostCreate = async (formData) => {

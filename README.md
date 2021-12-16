@@ -134,7 +134,7 @@ src
 | Backend Setup          |    H     |     2 HRS      |     2 HRS     |
 | Backend Auth           |    H     |     3 HRS      |     1 HR      |
 | Seed & Create data     |    H     |     2 HRS      |     2 HRS     |
-| Test backend routes    |    H     |      1 HR      |    .75 HRS    |
+| Test backend routes    |    H     |      1 HR      |     1 HR      |
 | Frontend Auth          |    H     |     3 HRS      |    .25 HRS    |
 | Frontend routes & test |    H     |     2 HRS      |   1.25 HRS    |
 | Layout/Nav/Footer JS   |    H     |     2 HRS      |     2 HRS     |
@@ -162,7 +162,7 @@ src
 | ImageFeed CSS          |    H     |     2 HRS      |   1.25 HRS    |
 | Deployment             |    H     |      1 HR      |     1 HRS     |
 | Media Queries          |    H     |     2 HRS      |    2.5 HRS    |
-| TOTAL                  |          |     66 HRS     |   45.5 HRS    |
+| TOTAL                  |          |     66 HRS     |   45.75 HRS   |
 
 <br>
 
@@ -193,8 +193,5 @@ src
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
-
-<!-- Imgur was down, so my crud broke and had to work around load time -->
-<!-- conditionally rendering footer & feeds -->
-<!-- redirects -->
+- _My CRUD had been working without issue until the final night of the project, when suddenly create, update, and delete all started throwing errors. The requests would process on a delay, while throwing errors. I believe this is because Imgur was down that night, where my seed images are hosted. To work around the load time, I added '?' to and/or guard operators to my returns in both ImageFeed and ImageGrid to force the return to wait for posts to load before checking for content._
+- _I needed to ensure that a user could not access any pages except for SignIn and SignUp without being logged in and viceversa for a user that is logged in. After a bit of research on redirects and working with classmates, I added conditionally rendered redirects on the routes in App.js._
