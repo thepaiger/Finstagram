@@ -70,3 +70,11 @@ footer > div {
     height: 26px;
   }
 }
+
+/* =====TABLET MEDIA QUERY===== */
+@media (min-width: 769px) {
+  main {
+    width: 614px;
+    margin: 0 auto;
+  }
+}
