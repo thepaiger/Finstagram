@@ -73,6 +73,7 @@ footer > div {
 
 /* =====DESKTOP MEDIA QUERY===== */
 @media (min-width: 769px) {
+  /* SET STATIC WIDTH FOR ALL CONTENT */
   main {
     width: 614px;
     margin: 0 auto;

@@ -81,7 +81,6 @@ _The **Finstagram** MVP will allow users to share and explore personal images. U
 src
 |__ assets/
       |__ graphics
-      |__ images
 |__ components/
       |__ ImageGrid
             |__ ImageGrid.css
@@ -90,7 +89,6 @@ src
             |__ ImageFeed.css
             |__ ImageFeed.jsx
 |__ containers/
-      |__ MainContainer.css
       |__ MainContainer.jsx
 |__ layout/
       |__ Layout.css
@@ -130,40 +128,41 @@ src
 
 #### Time Estimates
 
-| Task                    | Priority | Estimated Time | Time Invested | Actual Time |
-| ----------------------- | :------: | :------------: | :-----------: | :---------: |
-| README & planning       |    H     |     8 HRS      |     8 HRS     |             |
-| Backend Setup           |    H     |     2 HRS      |               |             |
-| Backend Auth            |    H     |     3 HRS      |               |             |
-| Backend Database        |    H     |     3 HRS      |               |             |
-| Seed & Create data      |    H     |     2 HRS      |               |             |
-| Test backend routes     |    H     |      1 HR      |               |             |
-| Frontend Auth           |    H     |     3 HRS      |               |             |
-| Frontend routes & test  |    H     |     2 HRS      |               |             |
-| Get, Edit, Delete posts |    H     |     3 HRS      |               |             |
-| Layout/Nav/Footer JS    |    H     |     2 HRS      |               |             |
-| Layout/Nav/Footer CSS   |    H     |     2 HRS      |               |             |
-| App JS                  |    H     |     2 HRS      |               |             |
-| App CSS                 |    H     |      1 HR      |               |             |
-| SignIn JS               |    H     |     2 HRS      |               |             |
-| SignIn CSS              |    H     |     2 HRS      |               |             |
-| SignUp JS               |    H     |     2 HRS      |               |             |
-| SignUp CSS              |    H     |     2 HRS      |               |             |
-| MainFeed JS             |    H     |     2 HRS      |               |             |
-| MainFeed CSS            |    H     |     2 HRS      |               |             |
-| UserProfile JS          |    H     |     2 HRS      |               |             |
-| UserProfile CSS         |    H     |     2 HRS      |               |             |
-| SingleUserFeed JS       |    H     |     2 HRS      |               |             |
-| SingleUserFeed CSS      |    H     |     2 HRS      |               |             |
-| PostEdit JS             |    H     |     2 HRS      |               |             |
-| PostEdit CSS            |    H     |     2 HRS      |               |             |
-| PostCreate JS           |    H     |     2 HRS      |               |             |
-| PostCreate CSS          |    H     |     2 HRS      |               |             |
-| ImageGrid JS            |    H     |     2 HRS      |               |             |
-| ImageGrid CSS           |    H     |     2 HRS      |               |             |
-| ImageFeed JS            |    H     |     2 HRS      |               |             |
-| ImageFeed CSS           |    H     |     2 HRS      |               |             |
-| TOTAL                   |          |     67 HRS     |     8 HRS     |             |
+| Task                   | Priority | Estimated Time | Time Invested |
+| ---------------------- | :------: | :------------: | :-----------: |
+| README & planning      |    H     |     9 HRS      |    10 HRS     |
+| Backend Setup          |    H     |     2 HRS      |     2 HRS     |
+| Backend Auth           |    H     |     3 HRS      |     1 HR      |
+| Seed & Create data     |    H     |     2 HRS      |     2 HRS     |
+| Test backend routes    |    H     |      1 HR      |    .75 HRS    |
+| Frontend Auth          |    H     |     3 HRS      |    .25 HRS    |
+| Frontend routes & test |    H     |     2 HRS      |   1.25 HRS    |
+| Layout/Nav/Footer JS   |    H     |     2 HRS      |     2 HRS     |
+| Layout/Nav/Footer CSS  |    H     |     2 HRS      |   2.75 HRS    |
+| Main Container JS      |    H     |      1 HR      |    .5 HRS     |
+| App JS                 |    H     |     2 HRS      |    1.5 HRS    |
+| App CSS                |    H     |      1 HR      |    .25 HRS    |
+| SignIn JS              |    H     |     2 HRS      |    1.5 HRS    |
+| SignIn CSS             |    H     |     2 HRS      |     1 HR      |
+| SignUp JS              |    H     |     2 HRS      |    .75 HRS    |
+| SignUp CSS             |    H     |     2 HRS      |    .5 HRS     |
+| MainFeed JS            |    H     |     2 HRS      |    .75 HRS    |
+| MainFeed CSS           |    H     |     2 HRS      |    .25 HRS    |
+| UserProfile JS         |    H     |     2 HRS      |   2.75 HRS    |
+| UserProfile CSS        |    H     |     2 HRS      |    1.5 HRS    |
+| SingleUserFeed JS      |    H     |     2 HRS      |    .75 HRS    |
+| SingleUserFeed CSS     |    H     |     2 HRS      |    .25 HRS    |
+| PostEdit JS            |    H     |     2 HRS      |     2 HRS     |
+| PostEdit CSS           |    H     |     2 HRS      |   1.25 HRS    |
+| PostCreate JS          |    H     |     2 HRS      |    .5 HRS     |
+| PostCreate CSS         |    H     |     2 HRS      |    .25 HRS    |
+| ImageGrid JS           |    H     |     2 HRS      |     2 HRS     |
+| ImageGrid CSS          |    H     |     2 HRS      |    1.5 HRS    |
+| ImageFeed JS           |    H     |     2 HRS      |     2 HRS     |
+| ImageFeed CSS          |    H     |     2 HRS      |   1.25 HRS    |
+| Deployment             |    H     |      1 HR      |     1 HRS     |
+| Media Queries          |    H     |     2 HRS      |    2.5 HRS    |
+| TOTAL                  |          |     66 HRS     |   45.5 HRS    |
 
 <br>
 
@@ -195,3 +194,5 @@ src
 ## Code Issues & Resolutions
 
 > Use this section to list of all major issues encountered and their resolution.
+
+<!-- Imgur was down, so my crud broke and had to work around load time -->
