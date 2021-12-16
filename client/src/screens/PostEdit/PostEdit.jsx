@@ -19,7 +19,7 @@ export default function PostEdit({ posts, handlePostUpdate, handlePostDelete }) 
       const singlePost = posts.find((post) => post.id === Number(post_id));
       setFormData({ caption: singlePost?.caption });
       setImage(singlePost?.img_url)
-      setImageAlt(`${singlePost.user?.username}'s Post`)
+      setImageAlt(`${singlePost?.user?.username}'s Post`)
     };
     if (posts.length) prefillFormData();
   }, [posts, post_id]);
@@ -33,31 +33,33 @@ export default function PostEdit({ posts, handlePostUpdate, handlePostDelete }) 
   };
 
   return (
-    <form
-      className="edit-form"
-      onSubmit={(e) => {
-        e.preventDefault();
-        handlePostUpdate(post_id, formData);
-      }}
-    >
-      <h2 className="edit-heading">Edit Post</h2>
-      <div className="edit-img-div">
-        <img className="edit-img" src={image} alt={imageAlt} />
-      </div>
-      <label className='hidden' htmlFor="edit-caption">
-        Caption
-      </label>
-      <textarea
-        className="edit-caption"
-        id="edit-caption"
-        placeholder="Update caption..."
-        name="caption"
-        value={caption}
-        onChange={handleChange}
-        required
-      />
-      <button className="edit-button">Share</button>
+    <div>
+      <form
+        className="edit-form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handlePostUpdate(post_id, formData);
+        }}
+      >
+        <h2 className="edit-heading">Edit Post</h2>
+        <div className="edit-img-div">
+          <img className="edit-img" src={image} alt={imageAlt} />
+        </div>
+        <label className='hidden' htmlFor="edit-caption">
+          Caption
+        </label>
+        <textarea
+          className="edit-caption"
+          id="edit-caption"
+          placeholder="Update caption..."
+          name="caption"
+          value={caption}
+          onChange={handleChange}
+          required
+        />
+        <button className="edit-button">Share</button>
+      </form>
       <button className="delete-button" onClick={() => handlePostDelete(post_id)}>Delete Post</button>
-    </form>
+    </div>
   )
 }
