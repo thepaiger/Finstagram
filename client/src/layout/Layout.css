@@ -71,7 +71,7 @@ footer > div {
   }
 }
 
-/* =====TABLET MEDIA QUERY===== */
+/* =====DESKTOP MEDIA QUERY===== */
 @media (min-width: 769px) {
   main {
     width: 614px;
