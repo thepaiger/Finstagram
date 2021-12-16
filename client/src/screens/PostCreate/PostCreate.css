@@ -56,4 +56,5 @@
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
+  cursor: pointer;
 }

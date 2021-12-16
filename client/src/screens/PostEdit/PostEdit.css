@@ -59,6 +59,7 @@
   color: #a8a8a8;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .delete-button {
@@ -71,4 +72,5 @@
   color: #a8a8a8;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
