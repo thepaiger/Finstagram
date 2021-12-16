@@ -196,3 +196,5 @@ src
 > Use this section to list of all major issues encountered and their resolution.
 
 <!-- Imgur was down, so my crud broke and had to work around load time -->
+<!-- conditionally rendering footer & feeds -->
+<!-- redirects -->

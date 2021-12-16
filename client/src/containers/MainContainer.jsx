@@ -30,6 +30,7 @@ export default function MainContainer({ currentUser }) {
     const newPost = await postPost(formData);
     setPosts((prevState) => [...prevState, newPost]);
     history.push("/");
+    refreshPage();
   };
 
   const handlePostUpdate = async (post_id, formData) => {
@@ -39,13 +40,19 @@ export default function MainContainer({ currentUser }) {
         return post.id === Number(post_id) ? newPost : post;
       }));
     history.push("/");
+    refreshPage();
   };
 
   const handlePostDelete = async (post_id) => {
     await deletePost(post_id);
     setPosts((prevState) => prevState.filter((post) => post.id !== Number(post_id)));
     history.push("/");
+    refreshPage();
   };
+
+  const refreshPage = () => {
+    window.location.reload();
+  }
 
   return (
     <div>
