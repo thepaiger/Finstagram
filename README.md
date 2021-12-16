@@ -21,6 +21,8 @@
 
 This build is an image-based social media platform in the style of Instagram, as an effort to challenge myself with duplicating an existing social media platform with the technologies currently in my tool belt.
 
+Deployed site: https://finstagram-ph.netlify.app/
+
 <br>
 
 ## MVP
