@@ -193,32 +193,32 @@ src
 
 ```
 <footer>
-        {!currentUser ? (
-          <div>
-            {location.pathname === "/sign-in" ? (
-              <p className="footer-account">
-                Don't have an account? <Link to="/sign-up" className="footer-account-link">Sign Up.</Link>
-              </p>
-            ) : (
-              <p className="footer-account">
-                Already have an account? <Link to="/sign-in" className="footer-account-link">Sign In.</Link>
-              </p>
-            )}
-          </div>
-        ) : (
-          <div>
-            <Link to="/">
-              <img className="home-btn" src={homeIcon} alt="home icon" />
-            </Link>
-            <Link to={`/profile/${currentUser.id}`}>
-              <img className="profile-btn" src={profileIcon} alt="profile icon" />
-            </Link>
-            {location.pathname === `/profile/${currentUser.id}` ? (
-              <img className="logout-btn" onClick={handleLogout} src={logoutIcon} alt="logout icon" />
-            ) : null}
-          </div>
-        )}
-      </footer>
+  {!currentUser ? (
+    <div>
+      {location.pathname === "/sign-in" ? (
+        <p className="footer-account">
+          Don't have an account? <Link to="/sign-up" className="footer-account-link">Sign Up.</Link>
+        </p>
+      ) : (
+        <p className="footer-account">
+          Already have an account? <Link to="/sign-in" className="footer-account-link">Sign In.</Link>
+        </p>
+      )}
+    </div>
+  ) : (
+    <div>
+      <Link to="/">
+        <img className="home-btn" src={homeIcon} alt="home icon" />
+      </Link>
+      <Link to={`/profile/${currentUser.id}`}>
+        <img className="profile-btn" src={profileIcon} alt="profile icon" />
+      </Link>
+      {location.pathname === `/profile/${currentUser.id}` ? (
+        <img className="logout-btn" onClick={handleLogout} src={logoutIcon} alt="logout icon" />
+      ) : null}
+    </div>
+  )}
+</footer>
 ```
 
 - _For my footer, I needed to conditionally render content based first on whether there was a current user and within that, the pathname. I used a ternary to check for a user, then useLocation to check the path/screen to render the correct footer content._
