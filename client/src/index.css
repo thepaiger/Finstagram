@@ -27,8 +27,8 @@ a {
   margin: 5px 0;
 }
 
-.form-validation:first-of-type {
-  margin: 20px 0 5px 0;
+.form-validation:last-of-type {
+  margin: 5px 0 20px 0;
 }
 
 code {
