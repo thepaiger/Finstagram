@@ -5,12 +5,14 @@ import { useState } from "react";
 import './SignIn.css'
 
 export default function SignIn({ handleSignIn }) {
+  // Initialize form data state
   const [formData, setFormData] = useState({
     username: "",
     password: "",
   });
   const { username, password } = formData;
 
+  // Set form data state to given values
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -28,6 +30,7 @@ export default function SignIn({ handleSignIn }) {
       }}
     >
       <h1 className="signin-heading">Finstagram</h1>
+
       <label className="hidden" htmlFor="signin-username">
         Username
       </label>

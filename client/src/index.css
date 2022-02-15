@@ -21,6 +21,16 @@ a {
   display: none;
 }
 
+.form-validation {
+  font-size: 14px;
+  color: #cb1010;
+  margin: 5px 0;
+}
+
+.form-validation:last-of-type {
+  margin: 5px 0 20px 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
