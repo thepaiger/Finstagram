@@ -2,9 +2,13 @@
 import { useState } from "react";
 
 // CSS
-import './SignUp.css'
+import "./SignUp.css";
 
 export default function SignUp({ handleSignUp }) {
+  // Initialize state for password verifications
+  const [passwordLongEnough, setPasswordLongEnough] = useState(true);
+  const [passwordConfirm, setPasswordConfirm] = useState(true);
+  // Initialize form data state
   const [formData, setFormData] = useState({
     email: "",
     name: "",
@@ -12,16 +16,43 @@ export default function SignUp({ handleSignUp }) {
     username: "",
     profile_pic_url: "",
     password: "",
+    confirm_password: "",
   });
-  const { email, name, pronouns, username, profile_pic_url, password } =
-    formData;
+  const {
+    email,
+    name,
+    pronouns,
+    username,
+    profile_pic_url,
+    password,
+    confirm_password,
+  } = formData;
 
+  // Set form data state to given values
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
     }));
+  };
+
+  // Confirm password length
+  const checkPasswordLength = () => {
+    if (formData.password.length >= 8) {
+      setPasswordLongEnough(true);
+    } else {
+      setPasswordLongEnough(false);
+    }
+  };
+
+  // Confirm password matches confirm_password value
+  const confirmPasswordsMatch = () => {
+    if (formData.password === formData.confirm_password) {
+      setPasswordConfirm(true);
+    } else {
+      setPasswordConfirm(false);
+    }
   };
 
   return (
@@ -33,19 +64,21 @@ export default function SignUp({ handleSignUp }) {
       }}
     >
       <h1 className="signup-heading">Enter Your Information</h1>
+
       <label className="hidden" htmlFor="signup-email">
         Email Address
       </label>
       <input
         className="signup-email"
         id="signup-email"
-        type="text"
+        type="email"
         placeholder="Email Address*"
         name="email"
         value={email}
         onChange={handleChange}
         required
       />
+
       <label className="hidden" htmlFor="signup-name">
         Name
       </label>
@@ -59,6 +92,7 @@ export default function SignUp({ handleSignUp }) {
         onChange={handleChange}
         required
       />
+
       <label className="hidden" htmlFor="signup-pronouns">
         Pronouns
       </label>
@@ -71,6 +105,7 @@ export default function SignUp({ handleSignUp }) {
         value={pronouns}
         onChange={handleChange}
       />
+
       <label className="hidden" htmlFor="signup-username">
         Username
       </label>
@@ -84,6 +119,7 @@ export default function SignUp({ handleSignUp }) {
         onChange={handleChange}
         required
       />
+
       <label className="hidden" htmlFor="signup-prof-pic">
         Profile Picture URL
       </label>
@@ -97,6 +133,7 @@ export default function SignUp({ handleSignUp }) {
         onChange={handleChange}
         required
       />
+
       <label className="hidden" htmlFor="signup-password">
         Password
       </label>
@@ -108,9 +145,36 @@ export default function SignUp({ handleSignUp }) {
         name="password"
         value={password}
         onChange={handleChange}
+        onBlur={checkPasswordLength}
         required
       />
+
+      <label className="hidden" htmlFor="signup-password-confirm">
+        Password
+      </label>
+      <input
+        className="signup-password"
+        id="signup-password-confirm"
+        type="password"
+        placeholder="Confirm Password*"
+        name="confirm_password"
+        value={confirm_password}
+        onChange={handleChange}
+        onBlur={confirmPasswordsMatch}
+        required
+      />
+
       <button className="signup-btn">Sign Up</button>
+
+      {/* Form validation notifiers */}
+      {passwordLongEnough ? null : (
+        <p className="form-validation">
+          **Password must be at least 8 characters.**
+        </p>
+      )}
+      {passwordConfirm ? null : (
+        <p className="form-validation">**Passwords must match.**</p>
+      )}
     </form>
   );
 }
